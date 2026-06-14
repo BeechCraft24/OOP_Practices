@@ -66,3 +66,27 @@ try:
     del account.balance
 except AccountException as error:
     print("Error:", error)
+
+
+
+
+class RouterConfig:
+    def __init__(self):
+        self.__ip_address = "192.168.1.1"
+
+    @property
+    def ip_address(self):
+        return self.__ip_address
+
+    @ip_address.setter
+    def ip_address(self, value):
+
+        if value.count(".") != 3:
+            raise ValueError("Invalid IP address")
+
+        self.__ip_address = value
+
+router = RouterConfig()
+
+router.ip_address = "101.0.0.1"
+print(router.ip_address)
