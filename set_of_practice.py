@@ -44,10 +44,5 @@
 # show(1, 2, 3)
 
 
-def show(*args):
-    print(args)
-show = input("enter something")
-
-
 # numbers = [1, 2, 3]
 # print(*numbers)
